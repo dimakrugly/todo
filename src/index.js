@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const  TodoList = () => {
-    return(
+const TodoList = () => {
+    const items = ['Drink coffee', 'Build Awesome App']
+
+    return (
         <ul>
-            <li>Learn React</li>
-            <li>Build awesome app</li>
+            <li>{items[0]}</li>
+            <li>{items[1]}</li>
         </ul>
     );
 };
@@ -15,12 +17,20 @@ const AppHeader = () => {
 }
 
 const SearchPanel = () => {
-    return  <input placeholder="search"/>;
+
+    const searchText = 'Type here to search';
+    const searchStyle = {
+        fontSize: '20px'
+    }
+
+    return <input
+        style = {searchStyle}
+        placeholder={searchText}/>;
 };
 
 
 const App = () => {
-    return (
+   return (
         <div>
             <AppHeader/>
             <SearchPanel/>
@@ -28,8 +38,6 @@ const App = () => {
         </div>
     );
 };
-
-
 
 
 ReactDOM.render(<App/>, document.getElementById('root'));
