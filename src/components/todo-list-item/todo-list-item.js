@@ -24,7 +24,7 @@ const TodoListItem = ({ label, important = false }) => {
 
       <button type="button"
               className="btn btn-outline-danger btn-sm float-right">
-        <i className="fa fa-trash-o" />
+        <i className="fa fa-trash" />
       </button>
     </span>
   );
